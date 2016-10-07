@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+            <title></title>
+            <style>
+                img
+                {
+                    display: block;
+                    width: 100%;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            /* placeholder for contenteditable dom */
+            [contenteditable=true]:empty:before{
+                content: attr(placeholder);
+                color: #a6a6a6;
+            }
+            
+            
+            #content
+            {
+                padding: 10px 0;
+                font-family:Helvetica;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                min-height:100px;
+            }
+            
+                </style>
+    </head>
+    
+    <body>
+        
+        <div id="content" contenteditable="true" onmouseup="saveSelection();" onkeyup="saveSelection();" onfocus="restoreSelection();" placeholder="轻触屏幕开始编辑正文" ></div>
+        <script>
+            var savedRange, isInFocus;
+            var editableContent = document.getElementById("content");
+            
+        
+        function triggerFocus()
+        {
+            editableContent.focus();
+        }
+        
+        
+        function saveSelection()
+        {
+            if(window.getSelection)
+            {
+                savedRange = window.getSelection().getRangeAt(0);
+            }
+            else if(document.selection)
+            {
+                savedRange = document.selection.createRange();
+            }
+        }
+        
+        
+        function restoreSelection()
+        {
+            isInFocus = true;
+            editableContent.focus();
+            if (savedRange != null) {
+                if (window.getSelection)
+                {
+                    var s = window.getSelection();
+                    if (s.rangeCount > 0)
+                    s.removeAllRanges();
+                    s.addRange(savedRange);
+                }
+                else if (document.createRange)
+                {
+                    window.getSelection().addRange(savedRange);
+                }
+                else if (document.selection)
+                {
+                    savedRange.select();
+                }
+            }
+        }
+        
+        
+        function insertImage(imageName, imagePath)
+        {
+            restoreSelection();
+            var imageElement = document.createElement('img');
+            var breakElement = document.createElement('div');
+            imageElement.setAttribute('src', imagePath);
+            imageElement.setAttribute('id', imageName);
+            breakElement.innerHTML = "<br>";
+            editableContent.appendChild(imageElement);
+            editableContent.appendChild(breakElement);
+        }
+        
+        
+        function updateImageURL(imageName, imageURL)
+        {
+            var selectedElement = document.getElementById(imageName);
+            selectedElement.setAttribute('src', imageURL);
+        }
+        
+        
+        
+        function placeHTMLToEditor(html)
+        {
+            editableContent.innerHTML = html;
+        }
+        
+            </script>
+    </body>
+</html>
