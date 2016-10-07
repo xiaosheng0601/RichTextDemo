@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  RichTextDemo
 //
 //  Created by Victor on 16/10/7.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-@property (nonatomic,strong)NSString *inHtmlString;
-
+@interface RootViewController : UIViewController
 
 @end
-
