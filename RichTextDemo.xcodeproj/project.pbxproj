@@ -10,9 +10,7 @@
 		5741D8621DA729C900174C05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5741D8611DA729C900174C05 /* main.m */; };
 		5741D8651DA729C900174C05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5741D8641DA729C900174C05 /* AppDelegate.m */; };
 		5741D8681DA729C900174C05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5741D8671DA729C900174C05 /* ViewController.m */; };
-		5741D86B1DA729C900174C05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5741D8691DA729C900174C05 /* Main.storyboard */; };
 		5741D86D1DA729C900174C05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5741D86C1DA729C900174C05 /* Assets.xcassets */; };
-		5741D8701DA729C900174C05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5741D86E1DA729C900174C05 /* LaunchScreen.storyboard */; };
 		5741D8781DA729E200174C05 /* richTextEditor.html in Resources */ = {isa = PBXBuildFile; fileRef = 5741D8771DA729E200174C05 /* richTextEditor.html */; };
 		5741D87B1DA72BD800174C05 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5741D87A1DA72BD800174C05 /* RootViewController.m */; };
 /* End PBXBuildFile section */
@@ -24,9 +22,7 @@
 		5741D8641DA729C900174C05 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5741D8661DA729C900174C05 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5741D8671DA729C900174C05 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5741D86A1DA729C900174C05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5741D86C1DA729C900174C05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5741D86F1DA729C900174C05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5741D8711DA729C900174C05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5741D8771DA729E200174C05 /* richTextEditor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = richTextEditor.html; sourceTree = "<group>"; };
 		5741D8791DA72BD800174C05 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -70,9 +66,7 @@
 				5741D8661DA729C900174C05 /* ViewController.h */,
 				5741D8671DA729C900174C05 /* ViewController.m */,
 				5741D8771DA729E200174C05 /* richTextEditor.html */,
-				5741D8691DA729C900174C05 /* Main.storyboard */,
 				5741D86C1DA729C900174C05 /* Assets.xcassets */,
-				5741D86E1DA729C900174C05 /* LaunchScreen.storyboard */,
 				5741D8711DA729C900174C05 /* Info.plist */,
 				5741D8601DA729C900174C05 /* Supporting Files */,
 			);
@@ -146,9 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5741D8781DA729E200174C05 /* richTextEditor.html in Resources */,
-				5741D8701DA729C900174C05 /* LaunchScreen.storyboard in Resources */,
 				5741D86D1DA729C900174C05 /* Assets.xcassets in Resources */,
-				5741D86B1DA729C900174C05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,25 +159,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		5741D8691DA729C900174C05 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5741D86A1DA729C900174C05 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5741D86E1DA729C900174C05 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5741D86F1DA729C900174C05 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5741D8721DA729C900174C05 /* Debug */ = {
@@ -281,7 +254,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RichTextDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Victor.RichTextDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -294,7 +267,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RichTextDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Victor.RichTextDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
